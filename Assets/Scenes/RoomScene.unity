@@ -518,8 +518,8 @@ MonoBehaviour:
   - {fileID: 369387515348128164, guid: dee83c879cba68146a5e6cecdf3b7a60, type: 3}
   closedRoom: {fileID: 369387515348128164, guid: dbd09666319cfe8448a4e2a6adfcadab, type: 3}
   rooms: []
-  waitTime: 2
-  boss: {fileID: 1898445321837384, guid: 09e14c596e782a742829f1166838514d, type: 3}
+  waitTime: 0
+  boss: {fileID: 1898445321837384, guid: 7c5dc95bd1cdb184987a4a592d5c641f, type: 3}
 --- !u!4 &1864468818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4579519963862137904, guid: 2c4ae5c1fa5244a42ad93ad1805c0e80, type: 3}
