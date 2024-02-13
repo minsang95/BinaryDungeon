@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 {
     private CharacterController _controller;
     private Rigidbody2D _rigidbody;
+    private CharacterStatsHandler _stats;
 
     private Vector2 _movement = Vector2.zero;
 
@@ -14,6 +15,7 @@ public class Movement : MonoBehaviour
     {
         _controller = GetComponent<CharacterController>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _stats = GetComponent<CharacterStatsHandler>();
     }
 
     void Start()
@@ -33,7 +35,7 @@ public class Movement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * 5;
+        direction = direction * _stats.CurrentStates.speed;
 
         _rigidbody.velocity = direction;
     }

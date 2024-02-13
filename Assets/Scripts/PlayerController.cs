@@ -7,8 +7,9 @@ public class PlayerController : CharacterController
 {
     private Camera _camera;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _camera = Camera.main;
     }
 
@@ -28,6 +29,11 @@ public class PlayerController : CharacterController
         {
             CallLookEvent(look);
         }
+    }
+
+    public void OnFire(InputValue value)
+    {
+        IsAttacking = value.isPressed;
     }
 
 }
