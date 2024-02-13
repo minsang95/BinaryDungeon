@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossBase : MonoBehaviour
@@ -40,6 +38,18 @@ public class BossBase : MonoBehaviour
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.localRotation = Quaternion.Euler(0, 0, rotZ);
         characterRenderer.flipY = Mathf.Abs(rotZ) > 90f;
+    }
+
+    protected void SetSortingOrder()
+    {
+        characterRenderer.sortingOrder = 6;
+        for (int i = 0; i < otherBodys.Length; i++)
+        {
+            if (otherBodys[i].position.y > transform.position.y)
+            {
+                characterRenderer.sortingOrder++;
+            }
+        }
     }
 
     protected void SpawnMucus()

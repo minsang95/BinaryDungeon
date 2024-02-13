@@ -1,11 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.Rendering;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 using Random = UnityEngine.Random;
 
 enum Pattern
@@ -17,7 +11,7 @@ enum Pattern
     P4,
 }
 
-public class BossController : BossBase
+public class BossHead : BossBase
 {
     Pattern pattern = Pattern.Idle;
     private bool changePattern = false;
@@ -25,7 +19,7 @@ public class BossController : BossBase
 
     private float deg = 0;
 
-    public static BossController i;
+    public static BossHead i;
     [HideInInspector] public int tailP = 0;
 
     protected override void Awake()
@@ -123,14 +117,7 @@ public class BossController : BossBase
         }
 
         Rotate(_direction);
-        characterRenderer.sortingOrder = 6;
-        for (int i = 0; i < otherBodys.Length; i++)
-        {
-            if (otherBodys[i].position.y > transform.position.y)
-            {
-                characterRenderer.sortingOrder++;
-            }
-        }
+        SetSortingOrder();
     }
 
     protected override Vector2 DirectionToTarget()

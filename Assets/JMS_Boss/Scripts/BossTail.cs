@@ -1,28 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class BossTailController : BossBase
+public class BossTail : BossBase
 {
     [SerializeField] private Rigidbody2D target;
     private void FixedUpdate()
     {
         SpawnMucus();
-        switch (BossController.i.tailP)
+        switch (BossHead.i.tailP)
         {
             case 0:
             case 1:
             case 2:
-                speed = BossController.i.speed;
+                speed = BossHead.i.speed;
                 _direction = DirectionToTarget();
                 ApplyMovement(_direction);
                 break;
             case 3:
                 _rigidbody.velocity = Vector3.zero;
                 speed = 24f;
-                if (BossController.i.changeTime > 7.6f)
+                if (BossHead.i.changeTime > 7.6f)
                 {
                     _direction = (transform.position - breakUpPivot.transform.position).normalized;
                 }
@@ -35,14 +31,7 @@ public class BossTailController : BossBase
         }
 
         Rotate(_direction);
-        characterRenderer.sortingOrder = 6;
-        for (int i = 0; i < otherBodys.Length; i++)
-        {
-            if (otherBodys[i].position.y > transform.position.y)
-            {
-                characterRenderer.sortingOrder++;
-            }
-        }
+        SetSortingOrder();
     }
     protected override Vector2 DirectionToTarget()
     {
