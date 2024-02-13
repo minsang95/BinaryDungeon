@@ -7,9 +7,9 @@ public class LongDistanceAttackController : MonoBehaviour
     [SerializeField] private LayerMask mapCollisionLayer;
 
     private LongDistanceAttackData _attackData;
-    private float _currentDuration;
-    private Vector2 _direction;
-    private bool _isReady;
+    private float _currentDuration; // 발사체 생성 후 경과 시간
+    private Vector2 _direction; // 발사체 방향
+    private bool _isReady;// 발사체 준비
 
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRanderer;
@@ -26,21 +26,26 @@ public class LongDistanceAttackController : MonoBehaviour
 
     private void Update()
     {
-        if(_isReady) return;
-
-        _currentDuration += Time.deltaTime;
-
-        if(_currentDuration > _attackData.duration)
+        if (!_isReady) //false일 때 return
         {
-            DestoryProjectile(transform.position);
+            return;
         }
-        _rigidbody.velocity = _direction * _attackData.speed;
+        else
+        {
+            _currentDuration += Time.deltaTime;
 
+            if (_currentDuration > _attackData.duration)
+            {
+                DestoryProjectile(transform.position);
+            }
+            _rigidbody.velocity = _direction * _attackData.speed; //발사체 날아가게(속도)
+        }
+        
     }
     //충돌
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(mapCollisionLayer.value == (mapCollisionLayer.value | 1 << collision.gameObject.layer))
+        if (mapCollisionLayer.value == (mapCollisionLayer.value | 1 << collision.gameObject.layer))
         {
             DestoryProjectile(collision.ClosestPoint(transform.position) - _direction * 0.2f);
         }

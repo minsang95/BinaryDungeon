@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: longDistanceAttackSO
   m_EditorClassIdentifier: 
   size: 1
-  delay: 0.15
+  delay: 0.2
   power: 1
   speed: 10
   target:
     serializedVersion: 2
     m_Bits: 0
-  bulletNameTag: ball
+  bulletNameTag: Fire
   duration: 5
   spread: 4
   numberOfProjectilesPershot: 1
   multipleProjectilesAngle: 5
-  projectileColor: {r: 1, g: 0.92156863, b: 0, a: 1}
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}

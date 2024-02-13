@@ -25,7 +25,7 @@ public class Shooting : MonoBehaviour
 
     private void OnAim(Vector2 aim)
     {
-        _aimDirection = aim;
+        _aimDirection = aim; //조준 방향 업데이트
     }
 
     private void OnShoot(AttackSO attackSO)
@@ -41,7 +41,7 @@ public class Shooting : MonoBehaviour
         {
             float angle = minAngle + projectilesAngleSpace * i; //총알과 총알의 사이 각도
             float randomSpread = Random.Range(-longDistanceAttackData.spread, longDistanceAttackData.spread);
-            angle += randomSpread;
+            angle += randomSpread; //랜덤으로 퍼짐 설정
             CreateProjectile(longDistanceAttackData,angle);
         }
         
@@ -50,11 +50,11 @@ public class Shooting : MonoBehaviour
     private void CreateProjectile(LongDistanceAttackData longDistanceAttackData, float angle)
     {
         _projectileManager.ShootBullet(projectileSpawnPosition.position,//발사위치
-            RotateVector2(_aimDirection, angle), //회전각
+            RotateVector2(_aimDirection, angle), //발사각
             longDistanceAttackData); // 공격 정보
     }
 
-    private static Vector2 RotateVector2(Vector2 vector, float degree) //회전각
+    private static Vector2 RotateVector2(Vector2 vector, float degree) //회전각 (2D벡터 회전)
     {
         return Quaternion.Euler(0,0,degree)* vector;
     }
