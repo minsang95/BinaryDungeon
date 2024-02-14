@@ -31,7 +31,7 @@ public class BossHead : BossBase
 
     private void FixedUpdate()
     {
-        SpawnMucus();
+        //SpawnMucus();
         changeTime += Time.fixedDeltaTime;
         if (changePattern)
         {
