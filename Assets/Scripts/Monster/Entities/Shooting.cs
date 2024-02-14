@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    private ProjectileManager _projectileManager;
     private MoveCharacterController _controller;
 
     [SerializeField] private Transform projectileSpawnPosition;
     private Vector2 _aimDirection = Vector2.right;
 
-    public GameObject testPrefab;
+    
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _projectileManager = ProjectileManager.instance;
         _controller.OnAttackEvent += OnShoot;
         _controller.OnLookEvent += OnAim;
     }
@@ -31,25 +33,33 @@ public class Shooting : MonoBehaviour
     private void OnShoot(AttackSO attackSO)
     {
         RangedAttackData rangedAttackData = attackSO as RangedAttackData;
-        float projectilesAngleSpace = rangedAttackData.multipleProjectilesAngle;
+        float projectilesAngleSpace = rangedAttackData.multipleProjectilesAngel;
         int numberOfProjectilesPerShot = rangedAttackData.numberofProjectilesPerShot;
 
-        float minAngle = -(numberOfProjectilesPerShot / 2f) * projectilesAngleSpace + 0.5f * rangedAttackData.multipleProjectilesAngle;
+        float minAngle = -(numberOfProjectilesPerShot / 2f) * projectilesAngleSpace + 0.5f * rangedAttackData.multipleProjectilesAngel;
+
 
         for (int i = 0; i < numberOfProjectilesPerShot; i++)
         {
             float angle = minAngle + projectilesAngleSpace * i;
             float randomSpread = Random.Range(-rangedAttackData.spread, rangedAttackData.spread);
             angle += randomSpread;
-            CreateProjectile(rangedAttackData,angle);
+            CreateProjectile(rangedAttackData, angle);
         }
-        
     }
 
     private void CreateProjectile(RangedAttackData rangedAttackData, float angle)
     {
-        Instantiate(testPrefab, projectileSpawnPosition.position,Quaternion.identity);
+        _projectileManager.ShootBullet(
+                projectileSpawnPosition.position,
+                RotateVector2(_aimDirection, angle),
+                rangedAttackData
+                );
     }
 
-    
+    private static Vector2 RotateVector2(Vector2 v, float degree)
+    {
+        return Quaternion.Euler(0, 0, degree) * v;
+    }
+
 }
