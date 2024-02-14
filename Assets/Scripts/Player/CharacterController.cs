@@ -55,4 +55,14 @@ public class CharacterController : MonoBehaviour
     {
         OnAttackEvent?.Invoke(attackSO);
     }
+
+
+    // 플레이어가 보물상자와 충돌 시 보물상자 사라지는 기능
+    private void OnCollisionEnter2D(Collision2D itemBoxOpen)
+    {
+        if (itemBoxOpen.gameObject.tag == "ItemBox")
+        {
+            Destroy(itemBoxOpen.gameObject);
+        }
+    }
 }

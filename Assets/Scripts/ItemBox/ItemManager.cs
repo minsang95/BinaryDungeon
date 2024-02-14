@@ -31,16 +31,6 @@ public class ItemManager : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D itemBoxOpen)
-    {
-        if (itemBoxOpen.gameObject.tag == "Player")
-        {
-            Debug.Log("»ç¶óÁü");
-            Destroy(itemBox.gameObject);
-        }
-    }
-
-
     void Start()
     {
         ItemGridPosition();
