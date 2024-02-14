@@ -427,6 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108906098}
   - component: {fileID: 1108906097}
+  - component: {fileID: 1108906099}
   m_Layer: 0
   m_Name: ProjectileManager
   m_TagString: Untagged
@@ -446,7 +447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1282a407284e172459efcec58b376e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testObj: {fileID: 32058154028106654, guid: 6cc167bc47844ef4fbef9e64413bb74b, type: 3}
 --- !u!4 &1108906098
 Transform:
   m_ObjectHideFlags: 0
@@ -462,6 +462,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1108906099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108906096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d4cec4afbff9d46b14d636ec03ebcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Fire
+    prefab: {fileID: 32058154028106654, guid: 6cc167bc47844ef4fbef9e64413bb74b, type: 3}
+    size: 20
 --- !u!1 &1627637572
 GameObject:
   m_ObjectHideFlags: 0
