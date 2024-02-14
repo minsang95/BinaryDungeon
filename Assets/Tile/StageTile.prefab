@@ -1542,6 +1542,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 3, y: 6, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 150
+      m_TileSpriteIndex: 150
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
@@ -1844,6 +1854,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: a68fba3ffb73659438c34c46c71b0283, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 321187d95240445438dbfff05eb37112, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 37d1859b8a80b184d8db391fbf1044df, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -1655104133, guid: 5ddd52667cc4c8d4da14f8cccd199ee1, type: 3}
@@ -2145,8 +2157,10 @@ Tilemap:
     m_Data: {fileID: 649852201, guid: 5ddd52667cc4c8d4da14f8cccd199ee1, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1260403909, guid: 5ddd52667cc4c8d4da14f8cccd199ee1, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 0073aa46afca2624b8e78f5e07027c3a, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 150
+  - m_RefCount: 151
     m_Data:
       e00: 1
       e01: 0
@@ -2165,13 +2179,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 150
+  - m_RefCount: 151
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -2, y: -6, z: 0}
-  m_Size: {x: 15, y: 10, z: 1}
+  m_Size: {x: 15, y: 13, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -2233,7 +2247,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.46875, y: 0.46875, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -2285,7 +2299,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &1993288594760381529
+--- !u!114 &5274554659648147009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
