@@ -61,7 +61,7 @@ public class LongDistanceAttackController : MonoBehaviour
         UpdateProjectileSprite();
         _trailRenderer.Clear();
         _currentDuration = 0;
-        _spriteRanderer.color = attackData.projectileColor;
+        //_spriteRanderer.color = attackData.projectileColor;
 
         // x축(플레이어의 오른쪽) 방향을 direction으로 날아가게
         transform.right = _direction;

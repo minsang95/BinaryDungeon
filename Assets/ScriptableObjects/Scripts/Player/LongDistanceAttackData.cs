@@ -11,5 +11,5 @@ public class LongDistanceAttackData : AttackSO
     public float spread;
     public int numberOfProjectilesPershot;
     public float multipleProjectilesAngle;
-    public Color projectileColor; // 초기 값이 투명하게 되어 있으므로 잘 확인
+    //public Color projectileColor; // 초기 값이 투명하게 되어 있으므로 잘 확인
 }
