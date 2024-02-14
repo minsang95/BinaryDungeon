@@ -16,6 +16,7 @@ public class LongDistanceAttackController : MonoBehaviour
     private TrailRenderer _trailRenderer;
     private ProjectileManager _projectileManager;
 
+    public bool fxOnDestroy = true;
 
     private void Awake()
     {
@@ -36,7 +37,7 @@ public class LongDistanceAttackController : MonoBehaviour
 
             if (_currentDuration > _attackData.duration)
             {
-                DestoryProjectile(transform.position);
+                DestroyProjectile(transform.position, false);
             }
             _rigidbody.velocity = _direction * _attackData.speed; //발사체 날아가게(속도)
         }
@@ -47,7 +48,24 @@ public class LongDistanceAttackController : MonoBehaviour
     {
         if (mapCollisionLayer.value == (mapCollisionLayer.value | 1 << collision.gameObject.layer))
         {
-            DestoryProjectile(collision.ClosestPoint(transform.position) - _direction * 0.2f);
+            DestroyProjectile(collision.ClosestPoint(transform.position) - _direction * .2f, fxOnDestroy);
+        }
+        else if(_attackData.target.value == (_attackData.target.value | (1 << collision.gameObject.layer)))
+        {
+            HealthSystem healthSystem = collision.GetComponent<HealthSystem>();
+            if(healthSystem != null)
+            {
+                healthSystem.ChangeHealth(-_attackData.power);
+                if(_attackData.isOnKnockback)
+                {
+                    Movement movement = collision.GetComponent<Movement>();
+                    if(movement != null)
+                    {
+                        movement.ApplyKnockback(transform, _attackData.knockbackPower, _attackData.knockbackTime);
+                    }
+                }
+            }
+            DestroyProjectile(collision.ClosestPoint(transform.position) - _direction * .2f, fxOnDestroy);
         }
     }
 
@@ -74,8 +92,12 @@ public class LongDistanceAttackController : MonoBehaviour
         transform.localScale = Vector3.one * _attackData.size;
     }
 
-    private void DestoryProjectile(Vector3 position)
+    private void DestroyProjectile(Vector3 position, bool createFx)
     {
+        if (createFx)
+        {
+
+        }
         gameObject.SetActive(false);
     }
 }

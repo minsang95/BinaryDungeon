@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2515811491327976400}
   - component: {fileID: 6415040936047825658}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,9 @@ GameObject:
   - component: {fileID: 1827805592099303094}
   - component: {fileID: 4209770825728845301}
   - component: {fileID: 9221763388637714831}
-  m_Layer: 7
+  - component: {fileID: 749979153326899174}
+  - component: {fileID: 8032599511725521687}
+  m_Layer: 6
   m_Name: Monster1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +211,7 @@ MonoBehaviour:
     Type: 2
     maxHealth: 3
     speed: 2
-    attackSO: {fileID: 0}
+    attackSO: {fileID: 11400000, guid: ede9197e8dd16c64591cb068941dd0cc, type: 2}
   statsModifiers: []
 --- !u!114 &4209770825728845301
 MonoBehaviour:
@@ -238,3 +240,28 @@ MonoBehaviour:
   followRange: 20
   targetTag: Player
   characterRenderer: {fileID: 6415040936047825658}
+--- !u!114 &749979153326899174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256833476315763441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976f15be77159f43a51910764d63f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+--- !u!114 &8032599511725521687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3256833476315763441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b46194fdf0f1e04a9fa66e531cb569c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

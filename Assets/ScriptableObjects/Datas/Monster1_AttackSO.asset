@@ -9,21 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 135672fe2c5b56c418484c2b0b2aaa67, type: 3}
-  m_Name: longDistanceAttackSO
+  m_Script: {fileID: 11500000, guid: 630159b787ac9b14097ebc23ed2c08d3, type: 3}
+  m_Name: Monster1_AttackSO
   m_EditorClassIdentifier: 
   size: 1
-  delay: 0.2
+  delay: 0.15
   power: 1
-  speed: 10
+  speed: 5
   target:
     serializedVersion: 2
-    m_Bits: 64
-  isOnKnockback: 1
-  knockbackPower: 5
-  knockbackTime: 0.1
-  bulletNameTag: Fire
-  duration: 5
-  spread: 4
-  numberOfProjectilesPershot: 1
-  multipleProjectilesAngle: 5
+    m_Bits: 256
+  isOnKnockback: 0
+  knockbackPower: 0
+  knockbackTime: 0

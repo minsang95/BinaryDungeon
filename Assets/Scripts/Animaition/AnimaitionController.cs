@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class AnimaitionController : Animation
@@ -9,15 +10,24 @@ public class AnimaitionController : Animation
     private static readonly int Attack = Animator.StringToHash("Attack");
     private static readonly int IsHit = Animator.StringToHash("IsHit");
 
+    private HealthSystem _healthSystem;
+
     protected override void Awake()
     {
         base.Awake();
+        _healthSystem = GetComponent<HealthSystem>();
     }
 
     private void Start()
     {
         controller.OnAttackEvent += Attacking;
         controller.OnMoveEvent += Move;
+
+        if(_healthSystem != null)
+        {
+            _healthSystem.OnDamage += Hit;
+            _healthSystem.OnInvincibilityEnd += InvincibilityEnd;
+        }
     }
 
     private void Move(Vector2 vector)

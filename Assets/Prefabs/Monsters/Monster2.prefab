@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3634336054343218558}
   - component: {fileID: 5675316899190338065}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WeaponeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,9 @@ GameObject:
   - component: {fileID: 6785918864245144942}
   - component: {fileID: 8752044804837449889}
   - component: {fileID: 7396542179049560345}
-  m_Layer: 7
+  - component: {fileID: 6442858639484517010}
+  - component: {fileID: 8324951598636049463}
+  m_Layer: 6
   m_Name: Monster2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,6 +270,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca907319c8dd84940bfb5e50ab8d3159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6442858639484517010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022400270036821134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976f15be77159f43a51910764d63f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+--- !u!114 &8324951598636049463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022400270036821134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b46194fdf0f1e04a9fa66e531cb569c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3570060921037772000
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2153275924158285806}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6861174790150715361}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137065483141260625}
   - component: {fileID: 5740074250909343033}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
