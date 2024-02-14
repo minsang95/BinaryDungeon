@@ -13,7 +13,7 @@ public class RoomTemplates : MonoBehaviour {
     public List<int> BottomNum;
     public List<int> TopNum;
 
-    public float waitTime = 7;
+    public float waitTime = 10;
 	private bool spawnedBoss;
 	public GameObject boss;
 

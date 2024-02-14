@@ -14,7 +14,7 @@ public class RoomSpawner : MonoBehaviour {
 	void Start(){
 		Destroy(gameObject, waitTime);
 		templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-		Invoke("Spawn", 0.05f);
+		Invoke("Spawn", 1f);
 	}
 
 
@@ -23,7 +23,7 @@ public class RoomSpawner : MonoBehaviour {
 			if(openingDirection == 1)
             {
                 rand = Random.Range(1, templates.BottomRooms.Length);
-                if (templates.BottomNum.Count >= 2)
+                if (templates.BottomNum.Count >= 2 || templates.TopNum.Count >= 3)
 				{
                     Instantiate(templates.BottomRooms[0], transform.position, templates.BottomRooms[0].transform.rotation);
                 }
@@ -35,7 +35,7 @@ public class RoomSpawner : MonoBehaviour {
             } else if(openingDirection == 2)
             {
                 rand = Random.Range(0, templates.TopRooms.Length);
-				if (templates.TopNum.Count >= 3)
+				if (templates.TopNum.Count >= 3 || templates.BottomNum.Count >= 2)
                 {
                     Instantiate(templates.TopRooms[0], transform.position, templates.TopRooms[0].transform.rotation);
                 }
@@ -50,12 +50,13 @@ public class RoomSpawner : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		Debug.Log(other.gameObject.tag);
         Debug.Log(other.tag);
         Debug.Log(other.CompareTag("Map"));
+        Debug.Log(other.CompareTag("SpawnPoint"));
         if (other.CompareTag("SpawnPoint"))
         {
             Destroy(gameObject);
-		}
+            Destroy(other.gameObject);
+        }
 	}
 }
