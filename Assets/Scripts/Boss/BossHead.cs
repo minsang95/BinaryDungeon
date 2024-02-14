@@ -29,8 +29,9 @@ public class BossHead : BossBase
         _direction = ClosestTarget.transform.position;
     }
 
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
+        base.FixedUpdate();
         SpawnMucus();
         changeTime += Time.fixedDeltaTime;
         if (changePattern)

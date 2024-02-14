@@ -3,8 +3,9 @@ using UnityEngine;
 public class BossTail : BossBase
 {
     [SerializeField] private Rigidbody2D targetRigidbody;
-    private void FixedUpdate()
+    protected override void FixedUpdate()
     {
+        base.FixedUpdate();
         SpawnMucus();
         switch (BossHead.i.tailP)
         {

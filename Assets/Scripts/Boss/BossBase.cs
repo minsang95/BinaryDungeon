@@ -7,16 +7,29 @@ public class BossBase : MonoBehaviour
     [SerializeField] protected GameObject mucus;
     [SerializeField] protected Transform ClosestTarget;
 
+
     protected Rigidbody2D _rigidbody;
     protected Vector3 _direction;
     protected bool outFloor = false;
     protected float mucusSpawnTime;
 
     [HideInInspector] public float speed = 8f;
+    [HideInInspector] public int damage = 1;
+
+    protected CharacterStatsHandler playerStat;
+    protected bool isCollidingWithPlayer = false;
 
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    protected virtual void FixedUpdate()
+    {
+        if (isCollidingWithPlayer)
+        {
+            ApplyHP();
+        }
     }
 
     protected void ApplyMovement(Vector2 direction)
@@ -78,10 +91,31 @@ public class BossBase : MonoBehaviour
                 _direction.x = -_direction.x;
             }
         }
+
+        if (collision.tag == "Player")
+        {
+            GameObject player = collision.gameObject;
+            playerStat = player.GetComponent<CharacterStatsHandler>();
+            isCollidingWithPlayer = true;
+        }
     }
     protected void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Floor")
             outFloor = true;
+
+        isCollidingWithPlayer = false;
+    }
+
+    protected void ApplyHP()
+    {
+        if(playerStat.CurrentStates._timeSinceLastChange < playerStat.CurrentStates.healthChangeDelay)
+        {
+            return;
+        }
+        playerStat.CurrentStates._timeSinceLastChange = 0;
+        playerStat.CurrentStates.maxHealth -= damage;
+        playerStat.CurrentStates.maxHealth = playerStat.CurrentStates.maxHealth < 0 ? 0 : playerStat.CurrentStates.maxHealth;
+        Debug.Log($"{playerStat.CurrentStates.maxHealth}");
     }
 }
