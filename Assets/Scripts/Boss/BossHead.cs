@@ -94,7 +94,7 @@ public class BossHead : BossBase
                     speed = 0f;
                     if (changeTime > 7f)
                     {
-                        _direction = (transform.position - breakUpPivot.transform.position).normalized;
+                        _direction = transform.position.normalized;
                         pattern = Pattern.P4;
                     }
                 }
