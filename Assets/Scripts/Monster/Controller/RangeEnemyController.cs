@@ -25,18 +25,18 @@ public class RangeEnemyController : EnemyController
                 if(hit.collider != null && layerMaskTarget == (layerMaskTarget | (1 << hit.collider.gameObject.layer)))
                 {
                     CallLookEvent(direction);
-                    CallMoveEvent(Vector2.zero);
+                    CallMoveEvnet(Vector2.zero);
                     IsAttacking = true;
                 }
             }
             else
             {
-                CallMoveEvent(direction);
+                CallMoveEvnet(direction);
             }
         }
         else
         {
-            CallMoveEvent(direction);
+            CallMoveEvnet(direction);
         }
     }
 }

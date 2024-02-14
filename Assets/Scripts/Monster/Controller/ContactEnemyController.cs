@@ -26,7 +26,7 @@ public class ContactEnemyController : EnemyController
             direction = DirectionToTarget();
         }
 
-        CallMoveEvent(direction);
+        CallMoveEvnet(direction);
         Rotate(direction);
     }
 

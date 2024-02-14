@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9083647dffc5cd441866519076f83db1, type: 3}
-  m_Name: Monster2_RangedAttackData
+  m_Script: {fileID: 11500000, guid: 135672fe2c5b56c418484c2b0b2aaa67, type: 3}
+  m_Name: Monster2_AttackSO
   m_EditorClassIdentifier: 
   size: 0.5
   delay: 1
@@ -18,10 +18,10 @@ MonoBehaviour:
   speed: 10
   target:
     serializedVersion: 2
-    m_Bits: 0
-  bulletNameTag: Arrow
+    m_Bits: 256
+  bulletNameTag: Fire
   duration: 5
-  spread: 4
-  numberofProjectilesPerShot: 1
-  multipleProjectilesAngel: 0
-  projectileColor: {r: 0, g: 0, b: 0, a: 0}
+  spread: 8
+  numberOfProjectilesPershot: 1
+  multipleProjectilesAngle: 7
+  projectileColor: {r: 0.6886792, g: 0.022739422, b: 0.022739422, a: 1}

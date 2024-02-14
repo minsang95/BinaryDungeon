@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MoveCharacterController
+public class EnemyController : CharacterController
 {
     GameManager gameManager;
 
