@@ -55,11 +55,12 @@ public class BossBase : MonoBehaviour
     protected void SpawnMucus()
     {
         mucusSpawnTime += Time.fixedDeltaTime;
-        if (mucusSpawnTime > 0.1f)
+        if (mucusSpawnTime > 0.15f)
         {
-            GameObject go = Instantiate(mucus);
-            go.transform.position = gameObject.transform.position;
-            mucusSpawnTime = 0;
+            GameObject go = GameManager.Instance.objectPool.SpawnFromPool("Mucus");
+            go.transform.position = transform.position;
+            go.SetActive(true);
+            mucusSpawnTime = 0f;
         }
     }
 

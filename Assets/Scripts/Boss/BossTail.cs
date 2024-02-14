@@ -5,7 +5,7 @@ public class BossTail : BossBase
     [SerializeField] private Rigidbody2D target;
     private void FixedUpdate()
     {
-        //SpawnMucus();
+        SpawnMucus();
         switch (BossHead.i.tailP)
         {
             case 0:
