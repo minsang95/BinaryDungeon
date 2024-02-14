@@ -8,7 +8,7 @@ public class BossMucus : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if(collision.CompareTag("Player"))
         {
             playerStat = collision.GetComponent<CharacterStatsHandler>();
             playerStat.CurrentStates.speed += 0.5f;
@@ -16,7 +16,7 @@ public class BossMucus : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             playerStat = collision.GetComponent<CharacterStatsHandler>();
             playerStat.CurrentStates.speed -= 0.5f;

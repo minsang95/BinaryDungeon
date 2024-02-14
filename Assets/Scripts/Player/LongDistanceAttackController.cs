@@ -18,6 +18,8 @@ public class LongDistanceAttackController : MonoBehaviour
 
     public bool fxOnDestroy = true;
 
+    private BossHead bossHead;
+
     private void Awake()
     {
         _spriteRanderer = GetComponentInChildren<SpriteRenderer>();
@@ -66,6 +68,15 @@ public class LongDistanceAttackController : MonoBehaviour
                 }
             }
             DestroyProjectile(collision.ClosestPoint(transform.position) - _direction * .2f, fxOnDestroy);
+        }
+
+        if (collision.CompareTag("Boss"))
+        {
+            bossHead = collision.GetComponent<BossHead>();
+            bossHead.bossHP -= _attackData.power;
+            bossHead.bossHP = bossHead.bossHP < 0 ? 0 : bossHead.bossHP;
+            Debug.Log($"BossHP : {bossHead.bossHP}");
+            gameObject.SetActive(false);
         }
     }
 

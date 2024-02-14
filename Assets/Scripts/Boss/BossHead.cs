@@ -22,6 +22,8 @@ public class BossHead : BossBase
     public static BossHead i;
     [HideInInspector] public int tailP = 0;
 
+    public float bossHP = 20;
+
     protected override void Awake()
     {
         base.Awake();

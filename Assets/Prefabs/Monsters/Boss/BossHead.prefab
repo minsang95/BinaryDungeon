@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2168616712728261232}
   m_Layer: 0
   m_Name: BossHead
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,6 +56,7 @@ MonoBehaviour:
   mucus: {fileID: 441238848465840334, guid: 4cb2b7940a9b7d54e82621933e81132f, type: 3}
   ClosestTarget: {fileID: 0}
   speed: 8
+  damage: 1
   changeTime: 0
   tailP: 0
 --- !u!212 &3168491375970703239

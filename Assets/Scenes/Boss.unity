@@ -350,6 +350,11 @@ PrefabInstance:
       propertyPath: targetRigidbody
       value: 
       objectReference: {fileID: 112496541}
+    - target: {fileID: 3872947152924909451, guid: 1437f63ef30c08a48855e5bcf6f47fe1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 4769675395439329212, guid: 1437f63ef30c08a48855e5bcf6f47fe1,
         type: 3}
       propertyPath: m_RootOrder

@@ -9,6 +9,10 @@ TagManager:
   - Destroy
   - Map
   - ItemBox
+  - Boss
+  - GroundV
+  - GroundH
+  - Floor
   layers:
   - Default
   - TransparentFX

@@ -79,21 +79,21 @@ public class BossBase : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Floor")
+        if (collision.CompareTag("Floor"))
             outFloor = false;
         if (!outFloor)
         {
-            if (collision.tag == "GroundV")
+            if (collision.CompareTag("GroundV"))
             {
                 _direction.y = -_direction.y;
             }
-            else if (collision.tag == "GroundH")
+            else if (collision.CompareTag("GroundH"))
             {
                 _direction.x = -_direction.x;
             }
         }
 
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             GameObject player = collision.gameObject;
             playerStat = player.GetComponent<CharacterStatsHandler>();
@@ -103,7 +103,7 @@ public class BossBase : MonoBehaviour
     }
     protected void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Floor")
+        if (collision.CompareTag("Floor"))
             outFloor = true;
 
         isCollidingWithPlayer = false;
@@ -119,6 +119,6 @@ public class BossBase : MonoBehaviour
         playerStat.CurrentStates.maxHealth -= damage;
         playerStat.CurrentStates.maxHealth = playerStat.CurrentStates.maxHealth < 0 ? 0 : playerStat.CurrentStates.maxHealth;
         playerMovement.ApplyKnockback(transform, 20f, 0.1f);
-        Debug.Log($"{playerStat.CurrentStates.maxHealth}");
+        Debug.Log($"Player HP : {playerStat.CurrentStates.maxHealth}");
     }
 }
