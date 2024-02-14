@@ -8,6 +8,7 @@ TagManager:
   - SpawnPoint
   - Destroy
   - Map
+  - ItemBox
   layers:
   - Default
   - TransparentFX

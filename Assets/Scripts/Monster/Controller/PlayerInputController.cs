@@ -4,7 +4,7 @@ using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerInputController : MoveCharacterController
+public class PlayerInputController : CharacterController
 {
     private Camera _camera;
 
@@ -17,7 +17,7 @@ public class PlayerInputController : MoveCharacterController
     public void OnMove(InputValue value)
     {
         Vector2 moveInput = value.Get<Vector2>().normalized;
-        CallMoveEvent(moveInput);
+        CallMoveEvnet(moveInput);
     }
 
     public void OnLook(InputValue value)
