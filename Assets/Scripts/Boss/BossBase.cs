@@ -4,7 +4,6 @@ public class BossBase : MonoBehaviour
 {
     [SerializeField] protected SpriteRenderer characterRenderer;
     [SerializeField] protected Transform[] otherBodys;
-    [SerializeField] protected Transform breakUpPivot;
     [SerializeField] protected GameObject mucus;
     [SerializeField] protected Transform ClosestTarget;
 

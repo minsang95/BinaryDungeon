@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BossTail : BossBase
 {
-    [SerializeField] private Rigidbody2D target;
+    [SerializeField] private Rigidbody2D targetRigidbody;
     private void FixedUpdate()
     {
         SpawnMucus();
@@ -20,7 +20,7 @@ public class BossTail : BossBase
                 speed = 24f;
                 if (BossHead.i.changeTime > 7.6f)
                 {
-                    _direction = (transform.position - breakUpPivot.transform.position).normalized;
+                    _direction = transform.position.normalized;
                 }
                 break;
             case 4:
@@ -35,6 +35,6 @@ public class BossTail : BossBase
     }
     protected override Vector2 DirectionToTarget()
     {
-        return ((Vector2)ClosestTarget.position - (target.velocity.normalized) * 0.6f - (Vector2)transform.position).normalized;
+        return ((Vector2)ClosestTarget.position - (targetRigidbody.velocity.normalized) * 0.6f - (Vector2)transform.position).normalized;
     }
 }
