@@ -197,7 +197,7 @@ Transform:
   m_GameObject: {fileID: 1508359464482735037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4277925137615413239}
@@ -206,7 +206,7 @@ Transform:
   - {fileID: 2116907982828700989}
   - {fileID: 1104785477556681886}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2332687787415951707
 GameObject:
@@ -436,7 +436,8 @@ MonoBehaviour:
   - {fileID: 1104785477556681886}
   breakUpPivot: {fileID: 5592631567810997565}
   mucus: {fileID: 441238848465840334, guid: 4cb2b7940a9b7d54e82621933e81132f, type: 3}
-  ClosestTarget: {fileID: 2483625490237590398, guid: b59615cf93e28ab419811a06cd54cf6d, type: 3}
+  ClosestTarget: {fileID: 2483625490237590398, guid: b59615cf93e28ab419811a06cd54cf6d,
+    type: 3}
   speed: 8
   changeTime: 0
   tailP: 0

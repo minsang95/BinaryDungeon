@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterStatsHandler : MonoBehaviour
+public class Monster_CharacterStatsHandler : MonoBehaviour
 {
-    [SerializeField] private CharacterStats baseStats;
-    public CharacterStats CurrentStates { get; private set; }
+    [SerializeField] private Monster_CharacterStats baseStats;
+    public Monster_CharacterStats CurrentStates { get; private set; }
     public List<CharacterStats> statsModifiers = new List<CharacterStats>();
 
     private void Awake()
@@ -22,7 +22,7 @@ public class CharacterStatsHandler : MonoBehaviour
             attackSO = Instantiate(baseStats.attackSO);
         }
 
-        CurrentStates = new CharacterStats { attackSO = attackSO };
+        CurrentStates = new Monster_CharacterStats { attackSO = attackSO };
         // TODO
         CurrentStates.statsChangeType = baseStats.statsChangeType;
         CurrentStates.maxHealth = baseStats.maxHealth;

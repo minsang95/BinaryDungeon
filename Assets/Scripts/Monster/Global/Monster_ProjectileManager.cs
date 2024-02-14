@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileManager : MonoBehaviour
+public class Monster_ProjectileManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _impactParticleSystem;
 
-    public static ProjectileManager instance;
+    public static Monster_ProjectileManager instance;
 
     [SerializeField] private GameObject testObj;
 

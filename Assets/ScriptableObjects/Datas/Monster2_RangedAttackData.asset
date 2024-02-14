@@ -18,13 +18,10 @@ MonoBehaviour:
   speed: 10
   target:
     serializedVersion: 2
-    m_Bits: 64
-  isOnKnockback: 1
-  knockbackPower: 5
-  knockbackTime: 0.1
+    m_Bits: 0
   bulletNameTag: Arrow
   duration: 5
   spread: 4
   numberofProjectilesPerShot: 1
-  multipleProjectilesAngle: 7
-  projecileColor: {r: 0.6226415, g: 0.09104663, b: 0.09104663, a: 1}
+  multipleProjectilesAngel: 0
+  projectileColor: {r: 0, g: 0, b: 0, a: 0}

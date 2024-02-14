@@ -12,11 +12,11 @@ public class MoveCharacterController : MonoBehaviour
     private float _timeSinceLastAttack = float.MaxValue;
     protected bool IsAttacking { get; set; }
 
-    protected CharacterStatsHandler Stats {  get;private set; }
+    protected Monster_CharacterStatsHandler Stats {  get;private set; }
 
     protected virtual void Awake()
     {
-        Stats = GetComponent<CharacterStatsHandler>();
+        Stats = GetComponent<Monster_CharacterStatsHandler>();
     }
 
     protected virtual void Update()

@@ -15,7 +15,7 @@ public class RangedAttackController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
     private TrailRenderer _trailRenderer;
-    private ProjectileManager _projectileManager;
+    private Monster_ProjectileManager _projectileManager;
 
     public bool fxOnDestory = true;
 
@@ -52,7 +52,7 @@ public class RangedAttackController : MonoBehaviour
     }
 
 
-    public void InitializeAttack(Vector2 direction, RangedAttackData attackData, ProjectileManager projectileManager)
+    public void InitializeAttack(Vector2 direction, RangedAttackData attackData, Monster_ProjectileManager projectileManager)
     {
         _projectileManager = projectileManager;
         _attackData = attackData;

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Monster_Movement : MonoBehaviour
 {
     private MoveCharacterController _controller;
-    private CharacterStatsHandler _stats;
+    private Monster_CharacterStatsHandler _stats;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
@@ -13,7 +13,7 @@ public class Movement : MonoBehaviour
     private void Awake()
     {
         _controller = GetComponent<MoveCharacterController>();
-        _stats = GetComponent<CharacterStatsHandler>();
+        _stats = GetComponent<Monster_CharacterStatsHandler>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 

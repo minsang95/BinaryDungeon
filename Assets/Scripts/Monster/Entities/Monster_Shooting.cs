@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class Monster_Shooting : MonoBehaviour
 {
-    private ProjectileManager _projectileManager;
+    private Monster_ProjectileManager _projectileManager;
     private MoveCharacterController _controller;
 
     [SerializeField] private Transform projectileSpawnPosition;
@@ -20,7 +20,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _projectileManager = ProjectileManager.instance;
+        _projectileManager = Monster_ProjectileManager.instance;
         _controller.OnAttackEvent += OnShoot;
         _controller.OnLookEvent += OnAim;
     }
