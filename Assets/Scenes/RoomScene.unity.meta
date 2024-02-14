@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scenes/RoomScene.unity.meta
-guid: fa302bd8446771d428f5f5047043be03
-========
-guid: d712bf4d255070441aa5e6200b7b0420
->>>>>>>> 이서현:Assets/Scenes/PlayerScene.unity.meta
+guid: 332d909edf9065c4da0d5bd57f524012
 DefaultImporter:
   externalObjects: {}
   userData: 
