@@ -12,6 +12,7 @@ public class ItemManager : MonoBehaviour
     public GameObject speedUp;
     public GameObject hpCure;
 
+
     public void ItemGridPosition()
     {
         for (int i = 0; i < 3; i++)
@@ -30,7 +31,10 @@ public class ItemManager : MonoBehaviour
 
     private void ItemBoxCreate()
     {
-        Instantiate(itemBox);
+        if (itemBox != null)
+        {
+            Instantiate(itemBox);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D itemBox)
@@ -65,7 +69,6 @@ public class ItemManager : MonoBehaviour
             Instantiate(hpCure);
         }
     }
-
 
 
 
