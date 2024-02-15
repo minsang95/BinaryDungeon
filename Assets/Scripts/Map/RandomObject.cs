@@ -8,7 +8,6 @@ public class RandomObject : MonoBehaviour
     private RoomTemplates templates;
     public GameObject[] Monsters;
     public GameObject[] Objects;
-    public List<GameObject> monNum;
 
     private int randMon;
     private int ranObj;
@@ -24,11 +23,21 @@ public class RandomObject : MonoBehaviour
        
         for (int i = 0; i < 4; i++)
         {
-            x = Random.Range(-7.0f, 7.0f);
-            y = Random.Range((templates.rooms.Count * 10f) - 12.5f, (templates.rooms.Count * 10f) - 6.5f);
-            transform.position = new Vector3(x, y, 0);
-            randMon = Random.Range(0, Monsters.Length);
-            Instantiate(Monsters[randMon], transform.position, transform.rotation);
+            if(Monsters.Length == 1)
+            {
+                transform.position = new Vector3(0, (templates.rooms.Count * 10f)- 7.5f, 0);
+                randMon = Random.Range(0, Monsters.Length);
+                Instantiate(Monsters[randMon], transform.position, transform.rotation);
+                break;
+
+            } else
+            {
+                x = Random.Range(-7.0f, 7.0f);
+                y = Random.Range((templates.rooms.Count * 10f) - 12.5f, (templates.rooms.Count * 10f) - 6.5f);
+                transform.position = new Vector3(x, y, 0);
+                randMon = Random.Range(0, Monsters.Length);
+                Instantiate(Monsters[randMon], transform.position, transform.rotation);
+            }
         }
 
         for (int i = 0; i < 3; i++)

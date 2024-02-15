@@ -4,7 +4,6 @@ public class BossBase : MonoBehaviour
 {
     [SerializeField] protected SpriteRenderer characterRenderer;
     [SerializeField] protected Transform[] otherBodys;
-    [SerializeField] protected Transform breakUpPivot;
     [SerializeField] protected GameObject mucus;
     [SerializeField] protected Transform ClosestTarget;
 
@@ -14,10 +13,23 @@ public class BossBase : MonoBehaviour
     protected float mucusSpawnTime;
 
     [HideInInspector] public float speed = 8f;
+    [HideInInspector] public int damage = 1;
+
+    protected CharacterStatsHandler playerStat;
+    protected Movement playerMovement;
+    protected bool isCollidingWithPlayer = false;
 
     protected virtual void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    protected virtual void FixedUpdate()
+    {
+        if (isCollidingWithPlayer)
+        {
+            AttackPlayer();
+        }
     }
 
     protected void ApplyMovement(Vector2 direction)
@@ -55,33 +67,57 @@ public class BossBase : MonoBehaviour
     protected void SpawnMucus()
     {
         mucusSpawnTime += Time.fixedDeltaTime;
-        if (mucusSpawnTime > 0.1f)
+        if (mucusSpawnTime > 0.15f)
         {
-            GameObject go = Instantiate(mucus);
-            go.transform.position = gameObject.transform.position;
-            mucusSpawnTime = 0;
+            GameObject go = GameManager.Instance.objectPool.SpawnFromPool("Mucus");
+            go.transform.position = transform.position;
+            go.SetActive(true);
+            mucusSpawnTime = 0f;
         }
     }
 
     protected void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Floor")
+        if (collision.CompareTag("Floor"))
             outFloor = false;
         if (!outFloor)
         {
-            if (collision.tag == "GroundV")
+            if (collision.CompareTag("GroundV"))
             {
                 _direction.y = -_direction.y;
             }
-            else if (collision.tag == "GroundH")
+            else if (collision.CompareTag("GroundH"))
             {
                 _direction.x = -_direction.x;
             }
         }
+
+        if (collision.CompareTag("Player"))
+        {
+            GameObject player = collision.gameObject;
+            playerStat = player.GetComponent<CharacterStatsHandler>();
+            playerMovement = player.GetComponent<Movement>();
+            isCollidingWithPlayer = true;
+        }
     }
     protected void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Floor")
+        if (collision.CompareTag("Floor"))
             outFloor = true;
+
+        isCollidingWithPlayer = false;
+    }
+
+    protected void AttackPlayer()
+    {
+        if(playerStat.CurrentStates._timeSinceLastChange < playerStat.CurrentStates.healthChangeDelay)
+        {
+            return;
+        }
+        playerStat.CurrentStates._timeSinceLastChange = 0;
+        playerStat.CurrentStates.maxHealth -= damage;
+        playerStat.CurrentStates.maxHealth = playerStat.CurrentStates.maxHealth < 0 ? 0 : playerStat.CurrentStates.maxHealth;
+        playerMovement.ApplyKnockback(transform, 20f, 0.1f);
+        Debug.Log($"Player HP : {playerStat.CurrentStates.maxHealth}");
     }
 }

@@ -1,14 +1,36 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossMucus : MonoBehaviour
 {
+    private CharacterStatsHandler playerStat;
+
     private void OnEnable()
     {
-        Destroy(gameObject, 1.5f);
+        StartCoroutine(RemoveMucus());
     }
-    private void OnTriggerStay(Collider other)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.tag == "Player")
-            other.GetComponent<Rigidbody2D>().drag = 0f;
+        if(collision.CompareTag("Player"))
+        {
+            playerStat = collision.GetComponent<CharacterStatsHandler>();
+            playerStat.CurrentStates.speed += 0.5f;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            playerStat = collision.GetComponent<CharacterStatsHandler>();
+            playerStat.CurrentStates.speed -= 0.5f;
+        }
+    }
+
+    IEnumerator RemoveMucus()
+    {
+        yield return new WaitForSeconds(1.5f);
+        gameObject.SetActive(false);
     }
 }

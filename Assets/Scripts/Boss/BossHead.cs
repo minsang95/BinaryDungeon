@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -22,6 +24,12 @@ public class BossHead : BossBase
     public static BossHead i;
     [HideInInspector] public int tailP = 0;
 
+    public float bossHP = 22;
+
+
+    public TextMeshProUGUI currentHpText;
+    public TextMeshProUGUI maxHpText;
+
     protected override void Awake()
     {
         base.Awake();
@@ -29,13 +37,24 @@ public class BossHead : BossBase
         _direction = ClosestTarget.transform.position;
     }
 
-    private void FixedUpdate()
+    private void Start()
     {
+        maxHpText.text = Convert.ToString((int)bossHP, 2);
+    }
+
+    private void Update()
+    {
+        currentHpText.text = Convert.ToString((int)bossHP, 2);
+    }
+
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
         SpawnMucus();
         changeTime += Time.fixedDeltaTime;
         if (changePattern)
         {
-            switch (Random.Range(0, 4))
+            switch (Random.Range(3, 4))
             {
                 case 1: pattern = Pattern.P1; break;
                 case 2: pattern = Pattern.P2; break;
@@ -94,7 +113,6 @@ public class BossHead : BossBase
                     speed = 0f;
                     if (changeTime > 7f)
                     {
-                        _direction = (transform.position - breakUpPivot.transform.position).normalized;
                         pattern = Pattern.P4;
                     }
                 }

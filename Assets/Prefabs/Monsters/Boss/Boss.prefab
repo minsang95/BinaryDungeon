@@ -53,11 +53,11 @@ MonoBehaviour:
   - {fileID: 6435434111704659051}
   - {fileID: 5844298313392164563}
   - {fileID: 2116907982828700989}
-  breakUpPivot: {fileID: 5592631567810997565}
   mucus: {fileID: 441238848465840334, guid: 4cb2b7940a9b7d54e82621933e81132f, type: 3}
   ClosestTarget: {fileID: 2116907982828700989}
   speed: 8
-  target: {fileID: 1100587326441562727}
+  damage: 1
+  targetRigidbody: {fileID: 1100587326441562727}
 --- !u!212 &7191239223172471634
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -181,6 +181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4769675395439329212}
+  - component: {fileID: -1416660640103656785}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -197,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 1508359464482735037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4277925137615413239}
@@ -206,8 +207,21 @@ Transform:
   - {fileID: 2116907982828700989}
   - {fileID: 1104785477556681886}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1416660640103656785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508359464482735037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b538a75aa17a746a312d5edf931634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHead: {fileID: 428271175413915183}
 --- !u!1 &2332687787415951707
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,11 +275,11 @@ MonoBehaviour:
   - {fileID: 5844298313392164563}
   - {fileID: 2116907982828700989}
   - {fileID: 1104785477556681886}
-  breakUpPivot: {fileID: 5592631567810997565}
   mucus: {fileID: 441238848465840334, guid: 4cb2b7940a9b7d54e82621933e81132f, type: 3}
   ClosestTarget: {fileID: 4277925137615413239}
   speed: 8
-  target: {fileID: 4130546934985073932}
+  damage: 1
+  targetRigidbody: {fileID: 4130546934985073932}
 --- !u!212 &6946296257829349103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -395,7 +409,7 @@ GameObject:
   - component: {fileID: 4130546934985073932}
   m_Layer: 0
   m_Name: BossHead
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,8 +425,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5592631567810997565}
+  m_Children: []
   m_Father: {fileID: 4769675395439329212}
   m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -434,13 +447,13 @@ MonoBehaviour:
   - {fileID: 5844298313392164563}
   - {fileID: 2116907982828700989}
   - {fileID: 1104785477556681886}
-  breakUpPivot: {fileID: 5592631567810997565}
   mucus: {fileID: 441238848465840334, guid: 4cb2b7940a9b7d54e82621933e81132f, type: 3}
-  ClosestTarget: {fileID: 2483625490237590398, guid: b59615cf93e28ab419811a06cd54cf6d,
-    type: 3}
+  ClosestTarget: {fileID: 0}
   speed: 8
+  damage: 1
   changeTime: 0
   tailP: 0
+  bossHP: 20
 --- !u!212 &2661831976201052442
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -608,11 +621,11 @@ MonoBehaviour:
   - {fileID: 6435434111704659051}
   - {fileID: 5844298313392164563}
   - {fileID: 1104785477556681886}
-  breakUpPivot: {fileID: 5592631567810997565}
   mucus: {fileID: 441238848465840334, guid: 4cb2b7940a9b7d54e82621933e81132f, type: 3}
   ClosestTarget: {fileID: 5844298313392164563}
   speed: 8
-  target: {fileID: 418041407431447733}
+  damage: 1
+  targetRigidbody: {fileID: 418041407431447733}
 --- !u!212 &8776502599540706548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -780,11 +793,11 @@ MonoBehaviour:
   - {fileID: 6435434111704659051}
   - {fileID: 2116907982828700989}
   - {fileID: 1104785477556681886}
-  breakUpPivot: {fileID: 5592631567810997565}
   mucus: {fileID: 441238848465840334, guid: 4cb2b7940a9b7d54e82621933e81132f, type: 3}
   ClosestTarget: {fileID: 6435434111704659051}
   speed: 8
-  target: {fileID: 5985843063116530782}
+  damage: 1
+  targetRigidbody: {fileID: 5985843063116530782}
 --- !u!212 &5133832622766642867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -899,34 +912,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!1 &7348824349443858606
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5592631567810997565}
-  m_Layer: 0
-  m_Name: Pivot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5592631567810997565
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7348824349443858606}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -0.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4277925137615413239}
-  m_RootOrder: -2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
