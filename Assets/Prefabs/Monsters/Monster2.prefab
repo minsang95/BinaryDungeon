@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 7396542179049560345}
   - component: {fileID: 6442858639484517010}
   - component: {fileID: 8324951598636049463}
-  - component: {fileID: 4689178063583998858}
+  - component: {fileID: 551623076869182924}
   m_Layer: 8
   m_Name: Monster2
   m_TagString: Monster
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b46194fdf0f1e04a9fa66e531cb569c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4689178063583998858
+--- !u!114 &551623076869182924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
