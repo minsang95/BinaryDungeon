@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283c8151c4ec26c4ab731b073c82113d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemBox: {fileID: 7158679371405156083, guid: cf5a369ab6158c841be61eb16740b385, type: 3}
+  itemBox: {fileID: 763958123718765623, guid: d2623f3f71b67a34ea08a171175a34f7, type: 3}
   randomNumber: 0
   powerUp: {fileID: 5940408790466896061, guid: e0755a0373d49564e8a0d0ddeec53358, type: 3}
   powerSpeedUp: {fileID: 5940408790466896061, guid: 614f3e9fa678d654fa8e14d9def14415,
