@@ -5,19 +5,40 @@ using UnityEngine;
 public class RandomObject : MonoBehaviour
 {
 
+    private RoomTemplates templates;
+    public GameObject[] Monsters;
     public GameObject[] Objects;
-    private int rand;
+    public List<GameObject> monNum;
 
-    // Start is called before the first frame update
+    private int randMon;
+    private int ranObj;
+    private float x = 0;
+    private float y = 10f;
+
     void Start()
     {
-        
+        templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
     }
-
-
-    void MakeObject()
+    public void MakeObject()
     {
-        rand = Random.Range(0, Objects.Length);
-    }
+       
+        for (int i = 0; i < 4; i++)
+        {
+            x = Random.Range(-7.0f, 7.0f);
+            y = Random.Range((templates.rooms.Count * 10f) - 12.5f, (templates.rooms.Count * 10f) - 6.5f);
+            transform.position = new Vector3(x, y, 0);
+            randMon = Random.Range(0, Monsters.Length);
+            Instantiate(Monsters[randMon], transform.position, transform.rotation);
+        }
 
-}
+        for (int i = 0; i < 3; i++)
+        {
+            x = Random.Range(-7.0f, 7.0f);
+            y = Random.Range((templates.rooms.Count * 10f) - 11.5f, (templates.rooms.Count * 10f) - 5.5f);
+            transform.position = new Vector3(x, y, 0);
+            ranObj = Random.Range(0, Objects.Length);
+            Instantiate(Objects[ranObj], transform.position, transform.rotation);
+        }
+
+    }
+ }
