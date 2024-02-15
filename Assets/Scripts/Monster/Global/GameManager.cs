@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -54,8 +55,15 @@ public class GameManager : MonoBehaviour
         gameOverUI.SetActive(true);
     }
 
+
     public void ActiveBossUI()
     {
         BossUI.SetActive(true);
+    }
+
+    public void Retry()
+    {
+        Debug.Log("다시하기");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
