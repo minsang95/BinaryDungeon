@@ -114,6 +114,7 @@ public class BossBase : MonoBehaviour
         {
             return;
         }
+
         playerStat.CurrentStates._timeSinceLastChange = 0;
         playerStat.CurrentStates.maxHealth -= damage;
         playerStat.CurrentStates.maxHealth = playerStat.CurrentStates.maxHealth < 0 ? 0 : playerStat.CurrentStates.maxHealth;
