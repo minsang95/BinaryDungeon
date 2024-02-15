@@ -82,8 +82,8 @@ public class ContactEnemyController : EnemyController
     private void ApplyHealthChange()
     {
         AttackSO attackSO = Stats.CurrentStates.attackSO;
-        bool hasBeecChanged = _collidingTargetHealthSystem.ChangeHealth(-attackSO.power);
-        if ((attackSO.isOnKnockback && _collidingMovement != null))
+        _collidingTargetHealthSystem.ChangeHealth(-attackSO.power);
+        if (attackSO.isOnKnockback && _collidingMovement != null)
         {
             _collidingMovement.ApplyKnockback(transform, attackSO.knockbackPower, attackSO.knockbackTime);
         }
