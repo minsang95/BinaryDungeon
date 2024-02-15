@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 8032599511725521687}
   m_Layer: 6
   m_Name: Monster1
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,6 +211,8 @@ MonoBehaviour:
     Type: 2
     maxHealth: 3
     speed: 2
+    healthChangeDelay: 0.5
+    _timeSinceLastChange: 0
     attackSO: {fileID: 11400000, guid: ede9197e8dd16c64591cb068941dd0cc, type: 2}
   statsModifiers: []
 --- !u!114 &4209770825728845301
