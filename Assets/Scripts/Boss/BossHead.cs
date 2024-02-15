@@ -26,6 +26,7 @@ public class BossHead : BossBase
 
     public float bossHP = 22;
 
+    GameManager gameManager;
 
     public TextMeshProUGUI currentHpText;
     public TextMeshProUGUI maxHpText;
@@ -33,6 +34,8 @@ public class BossHead : BossBase
     protected override void Awake()
     {
         base.Awake();
+        gameManager = GameManager.Instance;
+        ClosestTarget = gameManager.Player;
         i = this;
         _direction = ClosestTarget.transform.position;
     }
