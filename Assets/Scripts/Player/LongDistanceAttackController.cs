@@ -21,6 +21,7 @@ public class LongDistanceAttackController : MonoBehaviour
     public bool fxOnDestroy = true;
 
     private BossHead bossHead;
+    private Animator bossAnim;
 
 
     private void Awake()
@@ -76,8 +77,10 @@ public class LongDistanceAttackController : MonoBehaviour
         if (collision.CompareTag("Boss"))
         {
             bossHead = collision.GetComponent<BossHead>();
+            bossAnim = collision.GetComponent<Animator>();
             bossHead.bossHP -= _attackData.power;
-            bossHead.bossHP = bossHead.bossHP < 0 ? 0 : bossHead.bossHP;           
+            bossHead.bossHP = bossHead.bossHP < 0 ? 0 : bossHead.bossHP;
+            bossAnim.SetTrigger("Hit");
             Debug.Log($"BossHP : {bossHead.bossHP}");
             gameObject.SetActive(false);
         }
