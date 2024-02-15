@@ -1348,7 +1348,7 @@ MonoBehaviour:
   - {fileID: 2022400270036821134, guid: 867c6573c237a524d8c335c00488bf5c, type: 3}
   Objects:
   - {fileID: 7213012270767769230, guid: 540582c9971e67240b9412263fdef6ab, type: 3}
-  BossUI: {fileID: 0}
+  ItemBox: {fileID: 763958123718765623, guid: d2623f3f71b67a34ea08a171175a34f7, type: 3}
 --- !u!1 &6493141008335423085
 GameObject:
   m_ObjectHideFlags: 0

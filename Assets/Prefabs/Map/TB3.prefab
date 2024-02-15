@@ -4382,4 +4382,4 @@ MonoBehaviour:
   Objects:
   - {fileID: 7213012270767769230, guid: 8e270187984432446b42c4b263471c84, type: 3}
   - {fileID: 7213012270767769230, guid: 540582c9971e67240b9412263fdef6ab, type: 3}
-  BossUI: {fileID: 0}
+  ItemBox: {fileID: 763958123718765623, guid: d2623f3f71b67a34ea08a171175a34f7, type: 3}

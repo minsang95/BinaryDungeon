@@ -26,6 +26,16 @@ public class GameManager : MonoBehaviour
     private RoomTemplates templates;
     public GameObject BossUI;
 
+    public GameObject[] KeyZero;
+    public GameObject[] KeyOne;
+    public GameObject[] KeyPlus;
+    public GameObject[] KeyEqual;
+    [HideInInspector] public int keyZeroCount = 0;
+    [HideInInspector] public int keyOneCount = 0;
+    [HideInInspector] public int keyPlusCount = 0;
+    [HideInInspector] public int keyEqualCount = 0;
+    private bool bossRoomOpen = false;
+
     private void Awake()
     {
         Instance = this;
@@ -35,14 +45,14 @@ public class GameManager : MonoBehaviour
         healthSystem = Player.GetComponent<HealthSystem>();
 
         healthSystem.OnDamage += UpdateHealthUI;
+        healthSystem.OnHeal += UpdateHealthUI;
         healthSystem.OnDeath += GameOver;
-
-        gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        UpdateHealthUI();
+        if (keyZeroCount >= 3 && keyOneCount >= 7 && keyPlusCount >= 2 && keyEqualCount >= 1)
+            bossRoomOpen = true;
     }
 
     private void UpdateHealthUI()

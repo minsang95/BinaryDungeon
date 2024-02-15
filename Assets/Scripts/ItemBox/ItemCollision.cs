@@ -11,17 +11,23 @@ public class ItemCollision : MonoBehaviour
     public GameObject speedUp;
     public GameObject hpCure;
 
+    public bool openReady = true;
+
     private void OnCollisionEnter2D(Collision2D itemBoxOpen)
     {
         if (itemBoxOpen.gameObject.tag == "ItemBox")
         {
-            itemAnim = itemBoxOpen.gameObject.GetComponent<Animator>();
-            itemAnim.SetBool("ItemBoxOpen", true);
+            if(openReady)
+            {
+                itemAnim = itemBoxOpen.gameObject.GetComponent<Animator>();
+                itemAnim.SetBool("ItemBoxOpen", true);
 
-            Destroy(itemBoxOpen.gameObject, 1.0f);
+                Destroy(itemBoxOpen.gameObject, 1.0f);
 
-            Debug.Log(itemBoxOpen.transform.position);
-            ItemRandomSpawn(itemBoxOpen.transform.position);
+                Debug.Log(itemBoxOpen.transform.position);
+                ItemRandomSpawn(itemBoxOpen.transform.position);
+                StartCoroutine(OpenDelay());
+            }
         }
     }
 
@@ -34,23 +40,25 @@ public class ItemCollision : MonoBehaviour
         if (randomNumber == 0)
         {
             Instantiate(powerUp, position, spawnRotation);
-            Destroy(powerUp, 1.0f);
         }
         else if (randomNumber == 1)
         {
             Instantiate(powerSpeedUp, position, spawnRotation);
-            Destroy(powerSpeedUp, 1.0f);
         }
         else if (randomNumber == 2)
         {
             Instantiate(speedUp, position, spawnRotation);
-            Destroy(speedUp, 1.0f);
         }
         else
         {
             Instantiate(hpCure, position, spawnRotation);
-            Destroy(hpCure, 1.0f);
         }
     }
 
+    IEnumerator OpenDelay()
+    {
+        openReady = false;
+        yield return new WaitForSeconds(1f);
+        openReady = true;
+    }
 }
