@@ -16,12 +16,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Slider hpSlider;
     [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject gameClearUI; // 게임 클리어 UI 추가
 
     private HealthSystem healthSystem;
 
     public TextMeshProUGUI currentHpText;
     public TextMeshProUGUI maxHpText;
-
 
     private RoomTemplates templates;
     public GameObject BossUI;
@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+
     private void Update()
     {
         UpdateHealthUI();
@@ -49,12 +50,15 @@ public class GameManager : MonoBehaviour
     {
         hpSlider.value = healthSystem.CurrentHealth / healthSystem.MaxHealth;
     }
-    
+
     private void GameOver()
     {
         gameOverUI.SetActive(true);
     }
-
+    public void GameClear()
+    {
+        gameClearUI.SetActive(true);
+    }
 
     public void ActiveBossUI()
     {
@@ -66,4 +70,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("다시하기");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    
 }
