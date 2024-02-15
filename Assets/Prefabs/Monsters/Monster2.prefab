@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3634336054343218558}
   - component: {fileID: 5675316899190338065}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: WeaponeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 7396542179049560345}
   - component: {fileID: 6442858639484517010}
   - component: {fileID: 8324951598636049463}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Monster2
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -228,8 +228,6 @@ MonoBehaviour:
     Type: 2
     maxHealth: 3
     speed: 2
-    healthChangeDelay: 0.5
-    _timeSinceLastChange: 0
     attackSO: {fileID: 11400000, guid: 8abff3bd8c46ab845922cd34d368fa35, type: 2}
   statsModifiers: []
 --- !u!114 &6785918864245144942
@@ -306,7 +304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2153275924158285806}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6861174790150715361}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137065483141260625}
   - component: {fileID: 5740074250909343033}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
