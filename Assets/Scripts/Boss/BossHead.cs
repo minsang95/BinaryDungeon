@@ -37,6 +37,11 @@ public class BossHead : BossBase
         _direction = ClosestTarget.transform.position;
     }
 
+    private void Start()
+    {
+        maxHpText.text = Convert.ToString((int)bossHP, 2);
+    }
+
     private void Update()
     {
         currentHpText.text = Convert.ToString((int)bossHP, 2);
