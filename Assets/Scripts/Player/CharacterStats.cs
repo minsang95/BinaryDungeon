@@ -16,7 +16,5 @@ public class CharacterStats
     public StatsChageType Type;
     [Range(1, 100)] public int maxHealth;
     [Range(1f, 30f)] public float speed;
-    public float healthChangeDelay = .5f;
-    public float _timeSinceLastChange = 0f;
     public AttackSO attackSO;
 }

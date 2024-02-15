@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -24,12 +26,30 @@ public class BossHead : BossBase
 
     public float bossHP = 22;
 
+    GameManager gameManager;
+
+    public TextMeshProUGUI currentHpText;
+    public TextMeshProUGUI maxHpText;
 
     protected override void Awake()
     {
         base.Awake();
+        gameManager = GameManager.Instance;
+        currentHpText = gameManager.currentHpText;
+        maxHpText = gameManager.maxHpText;
+        ClosestTarget = gameManager.Player;
         i = this;
         _direction = ClosestTarget.transform.position;
+    }
+
+    private void Start()
+    {
+        maxHpText.text = Convert.ToString((int)bossHP, 2);
+    }
+
+    private void Update()
+    {
+        currentHpText.text = Convert.ToString((int)bossHP, 2);
     }
 
     protected override void FixedUpdate()

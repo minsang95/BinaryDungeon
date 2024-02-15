@@ -14,11 +14,6 @@ public class CharacterStatsHandler : MonoBehaviour
     {
         UpdateStats();
     }
-    private void Update()
-    {
-        if(CurrentStates._timeSinceLastChange < CurrentStates.healthChangeDelay)
-            CurrentStates._timeSinceLastChange += Time.deltaTime;
-    }
     private void UpdateStats()
     {
         AttackSO attackSO = null;

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2433812588523201621}
   - component: {fileID: 8025366073976492963}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: WeaponSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8375988391687364168}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5577645100290176129}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: WeaponPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 7476999104834987002}
   - component: {fileID: 8762116696882469077}
   - component: {fileID: 6728320177939746265}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,9 +273,11 @@ GameObject:
   - component: {fileID: 4681738213939434695}
   - component: {fileID: 4766558076363613837}
   - component: {fileID: 7955310762057320265}
-  m_Layer: 8
+  - component: {fileID: -6408948077468142056}
+  - component: {fileID: 1446119733814502951}
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -423,8 +425,6 @@ MonoBehaviour:
     Type: 2
     maxHealth: 10
     speed: 5
-    healthChangeDelay: 0.5
-    _timeSinceLastChange: 0
     attackSO: {fileID: 11400000, guid: ac95a2391d0041547882f4bf661199fc, type: 2}
   statsModifiers: []
 --- !u!61 &4766558076363613837
@@ -484,3 +484,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26efed15b22a7df4d8daa9a658f3681b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6408948077468142056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185588435229514110}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283c8151c4ec26c4ab731b073c82113d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemBox: {fileID: 0}
+  randomNumber: 0
+  powerUp: {fileID: 0}
+  powerSpeedUp: {fileID: 0}
+  speedUp: {fileID: 0}
+  hpCure: {fileID: 0}
+--- !u!114 &1446119733814502951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9185588435229514110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5976f15be77159f43a51910764d63f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5

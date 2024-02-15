@@ -12,13 +12,15 @@ public class RoomSpawner : MonoBehaviour {
 
 	void Start(){
 		templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-	}
+
+    }
 
 
 	void Spawn(){
 		if(spawned == false){
             rand = Random.Range(1, templates.TopBottomRooms.Length);
-            if (templates.rooms.Count >= 7)
+            //방 갯수 재한
+            if (templates.rooms.Count == 3)
 			{
                 Instantiate(templates.TopBottomRooms[0], transform.position, templates.TopBottomRooms[0].transform.rotation);
                 Destroy(gameObject, waitTime);

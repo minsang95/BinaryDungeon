@@ -4,15 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Rooms
-  - SpawnPoint
-  - Destroy
   - Map
-  - ItemBox
+  - ObjectSpawn
+  - SpawnPoint
+  - Undefined
+  - Monster
   - Boss
+  - Floor
   - GroundV
   - GroundH
-  - Floor
+  - Rooms
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Enemy
-  - level
+  - Level
   - Player
+  - Monster
   - 
   - 
   - 
@@ -34,9 +35,9 @@ TagManager:
   - 
   - 
   - 
-  - Layer 1
-  - Layer 2
-  - Layer 3
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -49,13 +50,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Layer 1
-    uniqueID: 2425651459
-    locked: 0
-  - name: Layer 2
-    uniqueID: 4250941897
-    locked: 0
-  - name: Layer 3
-    uniqueID: 4189426099
     locked: 0

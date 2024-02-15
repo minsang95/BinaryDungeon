@@ -16,6 +16,7 @@ public class BossDeath : MonoBehaviour
         if (bossHead.bossHP == 0)
         {
             Death();
+            bossHead.currentHpText.text = "0";
         }
     }
     void Death()

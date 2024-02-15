@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7191239223172471634}
   - component: {fileID: 2597665070231401397}
   - component: {fileID: 5518625329883209012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BossTail4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 6946296257829349103}
   - component: {fileID: 6775502733462668397}
   - component: {fileID: 5985843063116530782}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BossTail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,6 +454,8 @@ MonoBehaviour:
   changeTime: 0
   tailP: 0
   bossHP: 20
+  currentHpText: {fileID: 0}
+  maxHpText: {fileID: 0}
 --- !u!212 &2661831976201052442
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -581,7 +583,7 @@ GameObject:
   - component: {fileID: 8776502599540706548}
   - component: {fileID: 7934930029352609504}
   - component: {fileID: 1100587326441562727}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BossTail3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,7 +755,7 @@ GameObject:
   - component: {fileID: 5133832622766642867}
   - component: {fileID: 961514134116092721}
   - component: {fileID: 418041407431447733}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BossTail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

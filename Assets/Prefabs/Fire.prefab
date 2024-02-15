@@ -225,7 +225,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapCollisionLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
+  fxOnDestroy: 0
 --- !u!1 &972502797174436666
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,6 @@ public class MainCamera : MonoBehaviour
     private void Update()
     {
         playerPosition = (float)(player.transform.position.y + 5.0f);
-        Debug.Log(playerPosition);
         if (playerPosition + 0.4 >= offsetY+10.0f)
         {
             UpScreen();
