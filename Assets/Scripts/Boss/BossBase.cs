@@ -7,6 +7,7 @@ public class BossBase : MonoBehaviour
     [SerializeField] protected GameObject mucus;
     [SerializeField] protected Transform ClosestTarget;
 
+
     protected Rigidbody2D _rigidbody;
     protected Vector3 _direction;
     protected bool outFloor = false;

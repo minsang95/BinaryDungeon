@@ -21,7 +21,7 @@ public class BossTail : BossBase
                 speed = 24f;
                 if (BossHead.i.changeTime > 7.6f)
                 {
-                    _direction = -_direction;
+                    _direction = transform.position.normalized;
                 }
                 break;
             case 4:
