@@ -50,7 +50,7 @@ public class RandomObject : MonoBehaviour
             else
             {
                 x = Random.Range(-7.0f, 7.0f);
-                y = Random.Range((templates.rooms.Count * 10f) - 10f, (templates.rooms.Count * 10f) - 4f);
+                y = Random.Range((templates.rooms.Count * 10f) - 11f, (templates.rooms.Count * 10f) - 8f);
                 transform.position = new Vector3(x, y, 0);
                 ranObj = Random.Range(0, Objects.Length);
                 Instantiate(Objects[ranObj], transform.position, transform.rotation);

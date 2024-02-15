@@ -142,7 +142,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.36862746}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -847,7 +847,6 @@ MonoBehaviour:
   Monsters:
   - {fileID: 1508359464482735037, guid: 1437f63ef30c08a48855e5bcf6f47fe1, type: 3}
   Objects: []
-  BossUI: {fileID: 0}
 --- !u!1 &6493141008335423085
 GameObject:
   m_ObjectHideFlags: 0
