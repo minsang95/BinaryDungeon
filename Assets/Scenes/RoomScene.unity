@@ -638,6 +638,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c980a0e12edfa1468cf52e3f77b3f5e, type: 3}
+--- !u!1 &908613898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2962992070846291172, guid: 6c980a0e12edfa1468cf52e3f77b3f5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 702317161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &981096285 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3867928427585581197, guid: ecde0ed63ad94334bbf907146844c271,
@@ -699,7 +705,7 @@ MonoBehaviour:
   objectPool: {fileID: 1312514222}
   playerTag: Player
   hpSlider: {fileID: 644835135}
-  gameOverUI: {fileID: 0}
+  gameOverUI: {fileID: 908613898}
   currentHpText: {fileID: 981096285}
   maxHpText: {fileID: 1329329212}
   BossUI: {fileID: 532697207}
