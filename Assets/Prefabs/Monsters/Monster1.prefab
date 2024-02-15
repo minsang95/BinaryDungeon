@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2515811491327976400}
   - component: {fileID: 6415040936047825658}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 9221763388637714831}
   - component: {fileID: 749979153326899174}
   - component: {fileID: 8032599511725521687}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Monster1
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -211,8 +211,6 @@ MonoBehaviour:
     Type: 2
     maxHealth: 3
     speed: 2
-    healthChangeDelay: 0.5
-    _timeSinceLastChange: 0
     attackSO: {fileID: 11400000, guid: ede9197e8dd16c64591cb068941dd0cc, type: 2}
   statsModifiers: []
 --- !u!114 &4209770825728845301
