@@ -24,6 +24,7 @@ public class BossHead : BossBase
 
     public float bossHP = 20;
 
+
     protected override void Awake()
     {
         base.Awake();
@@ -38,7 +39,7 @@ public class BossHead : BossBase
         changeTime += Time.fixedDeltaTime;
         if (changePattern)
         {
-            switch (Random.Range(0, 4))
+            switch (Random.Range(3, 4))
             {
                 case 1: pattern = Pattern.P1; break;
                 case 2: pattern = Pattern.P2; break;
@@ -97,7 +98,6 @@ public class BossHead : BossBase
                     speed = 0f;
                     if (changeTime > 7f)
                     {
-                        _direction = transform.position.normalized;
                         pattern = Pattern.P4;
                     }
                 }
