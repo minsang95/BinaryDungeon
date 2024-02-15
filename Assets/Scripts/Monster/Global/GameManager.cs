@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI maxHpText;
 
 
+    private RoomTemplates templates;
+    public GameObject BossUI;
+
     private void Awake()
     {
         Instance = this;
@@ -49,5 +52,10 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         gameOverUI.SetActive(true);
+    }
+
+    public void ActiveBossUI()
+    {
+        BossUI.SetActive(true);
     }
 }

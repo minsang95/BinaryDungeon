@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 828296693901146482}
   - component: {fileID: 7740113070343009461}
   - component: {fileID: 1656160623318038340}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boss
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 3436464062014760466}
   - component: {fileID: 7408137736446463599}
   - component: {fileID: 6753502957032572731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ObjectSpawn
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7365446215071669389}
   - component: {fileID: 9176674469542832357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CloseDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3717275511339675558}
   - component: {fileID: 7797859994389028450}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OpenDoor
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 7811968433744168214}
   - component: {fileID: 7897681939369573753}
   - component: {fileID: 8112036416859283285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6631571951975666697}
   - component: {fileID: 5923996855776599864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: ObjectSpawn
   m_Icon: {fileID: 0}
@@ -847,6 +847,7 @@ MonoBehaviour:
   Monsters:
   - {fileID: 1508359464482735037, guid: 1437f63ef30c08a48855e5bcf6f47fe1, type: 3}
   Objects: []
+  BossUI: {fileID: 0}
 --- !u!1 &6493141008335423085
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +859,7 @@ GameObject:
   - component: {fileID: 1436309857478497852}
   - component: {fileID: 9056788851181394543}
   - component: {fileID: 7222580541517659764}
+  - component: {fileID: 8118390780436292109}
   m_Layer: 0
   m_Name: Map
   m_TagString: Floor
@@ -3097,6 +3099,42 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!19719996 &8118390780436292109
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493141008335423085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &7147885485454688372
 GameObject:
   m_ObjectHideFlags: 0
@@ -3702,7 +3740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3096054901805466179}
   - component: {fileID: 5995116850495430934}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3752,7 +3790,7 @@ GameObject:
   - component: {fileID: 8711078835275288857}
   - component: {fileID: 5825357361350871033}
   - component: {fileID: 1351681103091904661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door (1)
   m_TagString: GroundV
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 828296693901146482}
   - component: {fileID: 7740113070343009461}
   - component: {fileID: 1656160623318038340}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Entry Room
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6895090607192819695}
   - component: {fileID: 5184861316490935357}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: CloseDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3987324824213642010}
   - component: {fileID: 7417420317368915417}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: ObjectSpawn
   m_Icon: {fileID: 0}
@@ -198,7 +198,6 @@ MonoBehaviour:
   - {fileID: 2022400270036821134, guid: 867c6573c237a524d8c335c00488bf5c, type: 3}
   Objects:
   - {fileID: 7213012270767769230, guid: 8e270187984432446b42c4b263471c84, type: 3}
-  monNum: []
 --- !u!1 &5363436182785660583
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +210,7 @@ GameObject:
   - component: {fileID: 5313530381282315140}
   - component: {fileID: 8718060165540541480}
   - component: {fileID: 6534581274014652736}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +415,7 @@ GameObject:
   - component: {fileID: 6634240197672429253}
   - component: {fileID: 1982182752785833221}
   - component: {fileID: 3830513063892028005}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Door (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +620,7 @@ GameObject:
   - component: {fileID: 7811968433744168214}
   - component: {fileID: 7897681939369573753}
   - component: {fileID: 8112036416859283285}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1010,7 +1009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7123492498555345651}
   - component: {fileID: 2728644964228070015}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1058,7 @@ GameObject:
   - component: {fileID: 1436309857478497852}
   - component: {fileID: 9056788851181394543}
   - component: {fileID: 7222580541517659764}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3311,7 +3310,7 @@ GameObject:
   - component: {fileID: 4307222224140518006}
   - component: {fileID: 1987723433937584073}
   - component: {fileID: 1027090036376437950}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: OpenDoor
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -3376,7 +3375,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.13333334}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3484,7 +3483,7 @@ GameObject:
   - component: {fileID: 4030924613572112414}
   - component: {fileID: 8710668031725035411}
   - component: {fileID: 2890297828475341528}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
