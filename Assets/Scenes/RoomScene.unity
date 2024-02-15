@@ -184,6 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 43429566}
   - component: {fileID: 43429565}
+  - component: {fileID: 43429567}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4246f2987975fc428b4498dc20f216e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPool: {fileID: 0}
+  objectPool: {fileID: 43429567}
   playerTag: Player
 --- !u!4 &43429566
 Transform:
@@ -221,6 +222,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43429567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43429564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d4cec4afbff9d46b14d636ec03ebcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Mucus
+    prefab: {fileID: 441238848465840334, guid: 4cb2b7940a9b7d54e82621933e81132f, type: 3}
+    size: 50
 --- !u!1001 &867834779
 PrefabInstance:
   m_ObjectHideFlags: 0

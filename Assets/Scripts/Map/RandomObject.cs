@@ -42,11 +42,18 @@ public class RandomObject : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            x = Random.Range(-7.0f, 7.0f);
-            y = Random.Range((templates.rooms.Count * 10f) - 11.5f, (templates.rooms.Count * 10f) - 5.5f);
-            transform.position = new Vector3(x, y, 0);
-            ranObj = Random.Range(0, Objects.Length);
-            Instantiate(Objects[ranObj], transform.position, transform.rotation);
+            if (Monsters.Length == 1)
+            {
+                break;
+            }
+            else
+            {
+                x = Random.Range(-7.0f, 7.0f);
+                y = Random.Range((templates.rooms.Count * 10f) - 11.5f, (templates.rooms.Count * 10f) - 5.5f);
+                transform.position = new Vector3(x, y, 0);
+                ranObj = Random.Range(0, Objects.Length);
+                Instantiate(Objects[ranObj], transform.position, transform.rotation);
+            }
         }
 
     }

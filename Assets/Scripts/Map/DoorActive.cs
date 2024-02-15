@@ -21,7 +21,7 @@ public class DoorActive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Monster").Length != 0)
+        if (GameObject.FindGameObjectsWithTag("Monster").Length != 0 || GameObject.FindGameObjectsWithTag("Boss").Length != 0)
         {
             CloseDoor.SetActive(true);
         } else

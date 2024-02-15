@@ -10,6 +10,9 @@ TagManager:
   - Undefined
   - Monster
   - Boss
+  - Floor
+  - GroundV
+  - GroundH
   layers:
   - Default
   - TransparentFX
