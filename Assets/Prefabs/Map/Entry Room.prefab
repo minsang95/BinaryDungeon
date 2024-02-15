@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 828296693901146482}
   - component: {fileID: 7740113070343009461}
   - component: {fileID: 1656160623318038340}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Entry Room
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 8196788620865005829}
   - component: {fileID: 2335697048615125324}
   - component: {fileID: 4767973269523050604}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CloseDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 7811968433744168214}
   - component: {fileID: 7897681939369573753}
   - component: {fileID: 8112036416859283285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +629,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 23569286490707604}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 1436309857478497852}
   - component: {fileID: 9056788851181394543}
   - component: {fileID: 7222580541517659764}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2916,7 +2916,7 @@ GameObject:
   - component: {fileID: 8848858919692977309}
   - component: {fileID: 2427024799382421024}
   - component: {fileID: 6605593516097040986}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OpenDoor
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -3089,7 +3089,7 @@ GameObject:
   - component: {fileID: 4030924613572112414}
   - component: {fileID: 8710668031725035411}
   - component: {fileID: 2890297828475341528}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
