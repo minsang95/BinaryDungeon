@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class LongDistanceAttackController : MonoBehaviour
@@ -22,13 +20,13 @@ public class LongDistanceAttackController : MonoBehaviour
 
     private BossHead bossHead;
 
-
     private void Awake()
     {
         _spriteRanderer = GetComponentInChildren<SpriteRenderer>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _trailRenderer = GetComponent<TrailRenderer>();
     }
+
     private void Update()
     {
         if (!_isReady) //false일 때 return
@@ -45,8 +43,7 @@ public class LongDistanceAttackController : MonoBehaviour
             }
             _rigidbody.velocity = _direction * _attackData.speed; //발사체 날아가게(속도)
         }
-       
-
+        
     }
     //충돌
     private void OnTriggerEnter2D(Collider2D collision)
@@ -77,7 +74,7 @@ public class LongDistanceAttackController : MonoBehaviour
         {
             bossHead = collision.GetComponent<BossHead>();
             bossHead.bossHP -= _attackData.power;
-            bossHead.bossHP = bossHead.bossHP < 0 ? 0 : bossHead.bossHP;           
+            bossHead.bossHP = bossHead.bossHP < 0 ? 0 : bossHead.bossHP;
             Debug.Log($"BossHP : {bossHead.bossHP}");
             gameObject.SetActive(false);
         }

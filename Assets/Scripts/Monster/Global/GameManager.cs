@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,15 +10,10 @@ public class GameManager : MonoBehaviour
     public Transform Player { get; private set; }
     [SerializeField] private string playerTag = "Player";
 
-    private BossHead bossHead;
-    
-
     private void Awake()
     {
         Instance = this;
         objectPool = GetComponent<ObjectPool>();
         Player = GameObject.FindGameObjectWithTag(playerTag).transform;
-
     }
-    
 }
