@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 7396542179049560345}
   - component: {fileID: 6442858639484517010}
   - component: {fileID: 8324951598636049463}
+  - component: {fileID: 551623076869182924}
   m_Layer: 8
   m_Name: Monster2
   m_TagString: Monster
@@ -295,6 +296,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b46194fdf0f1e04a9fa66e531cb569c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &551623076869182924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022400270036821134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26efed15b22a7df4d8daa9a658f3681b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3570060921037772000
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137065483141260625}
   - component: {fileID: 5740074250909343033}
+  - component: {fileID: 3491677989981762099}
   m_Layer: 8
   m_Name: MainSprite
   m_TagString: Untagged
@@ -432,7 +446,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: cabcb1993aa69468187283fe2f1525e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86afbf04432b34e1883a20f99f007881, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -443,3 +457,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3491677989981762099
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7164845551018074853}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e6831d1a659e6548aa78a3e8dc1fd3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
