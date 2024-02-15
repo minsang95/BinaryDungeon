@@ -206,10 +206,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemBox: {fileID: 0}
   randomNumber: 0
-  powerUp: {fileID: 0}
-  powerSpeedUp: {fileID: 0}
-  speedUp: {fileID: 0}
-  hpCure: {fileID: 0}
+  powerUp: {fileID: 5940408790466896061, guid: e0755a0373d49564e8a0d0ddeec53358, type: 3}
+  powerSpeedUp: {fileID: 5940408790466896061, guid: 614f3e9fa678d654fa8e14d9def14415,
+    type: 3}
+  speedUp: {fileID: 5940408790466896061, guid: 99cad78de9468c04a9fa34947a8537e4, type: 3}
+  hpCure: {fileID: 5940408790466896061, guid: 765d5216ad96f0149a13c1ee4afc7e1a, type: 3}
 --- !u!1 &7158679371405156083
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +244,7 @@ Transform:
   m_Children:
   - {fileID: 5060233683240265547}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &4962320984563658500
 Grid:
