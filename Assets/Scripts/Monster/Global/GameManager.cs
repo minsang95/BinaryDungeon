@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverUI;
 
     private HealthSystem healthSystem;
-    private CharacterStatsHandler characterStatsHandler;
 
     public TextMeshProUGUI currentHpText;
     public TextMeshProUGUI maxHpText;
@@ -30,7 +29,6 @@ public class GameManager : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag(playerTag).transform;
 
         healthSystem = Player.GetComponent<HealthSystem>();
-        characterStatsHandler = Player.GetComponent<CharacterStatsHandler>();
 
         healthSystem.OnDamage += UpdateHealthUI;
         healthSystem.OnDeath += GameOver;
@@ -45,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateHealthUI()
     {
-        hpSlider.value = characterStatsHandler.CurrentStates.maxHealth / healthSystem.MaxHealth;
+        hpSlider.value = healthSystem.CurrentHealth / healthSystem.MaxHealth;
     }
     
     private void GameOver()
