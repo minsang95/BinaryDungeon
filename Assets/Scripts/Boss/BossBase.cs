@@ -28,7 +28,7 @@ public class BossBase : MonoBehaviour
     {
         if (isCollidingWithPlayer)
         {
-            playerHealthSystem.ChangeHealth(damage);
+            playerHealthSystem.ChangeHealth(-damage);
             playerMovement.ApplyKnockback(transform, 20f, 0.1f);
         }
     }
