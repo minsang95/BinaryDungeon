@@ -35,6 +35,8 @@ public class BossHead : BossBase
     {
         base.Awake();
         gameManager = GameManager.Instance;
+        currentHpText = gameManager.currentHpText;
+        maxHpText = gameManager.maxHpText;
         ClosestTarget = gameManager.Player;
         i = this;
         _direction = ClosestTarget.transform.position;

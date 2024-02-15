@@ -15,7 +15,7 @@ public class BossBase : MonoBehaviour
     [HideInInspector] public float speed = 8f;
     [HideInInspector] public int damage = 1;
 
-    protected CharacterStatsHandler playerStat;
+    protected HealthSystem playerHealthSystem;
     protected Movement playerMovement;
     protected bool isCollidingWithPlayer = false;
 
@@ -28,7 +28,8 @@ public class BossBase : MonoBehaviour
     {
         if (isCollidingWithPlayer)
         {
-            AttackPlayer();
+            playerHealthSystem.ChangeHealth(damage);
+            playerMovement.ApplyKnockback(transform, 20f, 0.1f);
         }
     }
 
@@ -95,7 +96,7 @@ public class BossBase : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameObject player = collision.gameObject;
-            playerStat = player.GetComponent<CharacterStatsHandler>();
+            playerHealthSystem = player.GetComponent<HealthSystem>();
             playerMovement = player.GetComponent<Movement>();
             isCollidingWithPlayer = true;
         }
@@ -106,19 +107,5 @@ public class BossBase : MonoBehaviour
             outFloor = true;
 
         isCollidingWithPlayer = false;
-    }
-
-    protected void AttackPlayer()
-    {
-        if(playerStat.CurrentStates._timeSinceLastChange < playerStat.CurrentStates.healthChangeDelay)
-        {
-            return;
-        }
-
-        playerStat.CurrentStates._timeSinceLastChange = 0;
-        playerStat.CurrentStates.maxHealth -= damage;
-        playerStat.CurrentStates.maxHealth = playerStat.CurrentStates.maxHealth < 0 ? 0 : playerStat.CurrentStates.maxHealth;
-        playerMovement.ApplyKnockback(transform, 20f, 0.1f);
-        Debug.Log($"Player HP : {playerStat.CurrentStates.maxHealth}");
     }
 }

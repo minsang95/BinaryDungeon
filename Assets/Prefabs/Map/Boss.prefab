@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 828296693901146482}
   - component: {fileID: 7740113070343009461}
   - component: {fileID: 1656160623318038340}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Boss
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 3436464062014760466}
   - component: {fileID: 7408137736446463599}
   - component: {fileID: 6753502957032572731}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: ObjectSpawn
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7365446215071669389}
   - component: {fileID: 9176674469542832357}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: CloseDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3717275511339675558}
   - component: {fileID: 7797859994389028450}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: OpenDoor
   m_TagString: SpawnPoint
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 7811968433744168214}
   - component: {fileID: 7897681939369573753}
   - component: {fileID: 8112036416859283285}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6631571951975666697}
   - component: {fileID: 5923996855776599864}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: ObjectSpawn
   m_Icon: {fileID: 0}
@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 1436309857478497852}
   - component: {fileID: 9056788851181394543}
   - component: {fileID: 7222580541517659764}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Map
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3109,7 +3109,7 @@ GameObject:
   - component: {fileID: 3984230736968827651}
   - component: {fileID: 6984804079446123439}
   - component: {fileID: 8978835805217578844}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: CollisionTD
   m_TagString: GroundV
   m_Icon: {fileID: 0}
@@ -3702,7 +3702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3096054901805466179}
   - component: {fileID: 5995116850495430934}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3752,7 +3752,7 @@ GameObject:
   - component: {fileID: 8711078835275288857}
   - component: {fileID: 5825357361350871033}
   - component: {fileID: 1351681103091904661}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Door (1)
   m_TagString: GroundV
   m_Icon: {fileID: 0}
@@ -3957,7 +3957,7 @@ GameObject:
   - component: {fileID: 4030924613572112414}
   - component: {fileID: 8710668031725035411}
   - component: {fileID: 2890297828475341528}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: CollisionRL
   m_TagString: GroundH
   m_Icon: {fileID: 0}

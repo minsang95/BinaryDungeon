@@ -13,6 +13,7 @@ TagManager:
   - Floor
   - GroundV
   - GroundH
+  - Rooms
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Level
   - 
   - 
   - 

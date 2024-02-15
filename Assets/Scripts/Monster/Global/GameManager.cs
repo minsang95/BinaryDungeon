@@ -18,8 +18,10 @@ public class GameManager : MonoBehaviour
 
     private HealthSystem healthSystem;
     private CharacterStatsHandler characterStatsHandler;
-    private BossHead bossHead;
-    
+
+    public TextMeshProUGUI currentHpText;
+    public TextMeshProUGUI maxHpText;
+
 
     private void Awake()
     {
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour
         healthSystem = Player.GetComponent<HealthSystem>();
         characterStatsHandler = Player.GetComponent<CharacterStatsHandler>();
 
-        //healthSystem.OnDamage += UpdateHealthUI;
+        healthSystem.OnDamage += UpdateHealthUI;
         healthSystem.OnDeath += GameOver;
 
         gameObject.SetActive(false);
