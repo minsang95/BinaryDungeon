@@ -6,12 +6,6 @@ using UnityEngine.Tilemaps;
 public class ItemManager : MonoBehaviour
 {
     public GameObject itemBox;
-    public int randomNumber;
-    public GameObject powerUp;
-    public GameObject powerSpeedUp;
-    public GameObject speedUp;
-    public GameObject hpCure;
-
 
     public void ItemGridPosition()
     {
@@ -37,37 +31,8 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D itemBox)
+    private void OnCollisionEnter2D(Collision2D player)
     {
-            if (itemBox.gameObject.tag == "Player")
-            {
-                /*Instantiate(ItemRandomSpawn);*/
-                ItemRandomSpawn();
-                Debug.Log(itemBox.transform.position);
-            }
-    }
-
-
-    private void ItemRandomSpawn()
-    {
-        randomNumber = Random.Range(0, 3);
-
-        if (randomNumber == 0)
-        {
-            Instantiate(powerUp);
-        }
-        else if (randomNumber == 1)
-        {
-            Instantiate(powerSpeedUp);
-        }
-        else if (randomNumber == 2)
-        {
-            Instantiate(speedUp);
-        }
-        else
-        {
-            Instantiate(hpCure);
-        }
     }
 
 

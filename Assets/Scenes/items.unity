@@ -257,6 +257,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c676247a892af4ab846c806475a371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUp: {fileID: 5940408790466896061, guid: e0755a0373d49564e8a0d0ddeec53358, type: 3}
+  powerSpeedUp: {fileID: 5940408790466896061, guid: 614f3e9fa678d654fa8e14d9def14415,
+    type: 3}
+  speedUp: {fileID: 5940408790466896061, guid: 99cad78de9468c04a9fa34947a8537e4, type: 3}
+  hpCure: {fileID: 5940408790466896061, guid: 765d5216ad96f0149a13c1ee4afc7e1a, type: 3}
 --- !u!114 &33497041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,12 +685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemBox: {fileID: 763958123718765623, guid: d2623f3f71b67a34ea08a171175a34f7, type: 3}
-  randomNumber: 0
-  powerUp: {fileID: 5940408790466896061, guid: e0755a0373d49564e8a0d0ddeec53358, type: 3}
-  powerSpeedUp: {fileID: 5940408790466896061, guid: 614f3e9fa678d654fa8e14d9def14415,
-    type: 3}
-  speedUp: {fileID: 5940408790466896061, guid: 99cad78de9468c04a9fa34947a8537e4, type: 3}
-  hpCure: {fileID: 5940408790466896061, guid: 765d5216ad96f0149a13c1ee4afc7e1a, type: 3}
 --- !u!4 &1060062563
 Transform:
   m_ObjectHideFlags: 0
