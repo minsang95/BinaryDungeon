@@ -14,21 +14,18 @@ public class DisapperOnDeath : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _healthSystem.OnDeath += OnDeath;
     }
-    private void Update()
-    {
-        keyIndex = Random.Range(0, GameManager.Instance.Keys.Count);
-    }
+
     void OnDeath()
     {
         _rigidbody.velocity = Vector3.zero;
-
-        GameObject key = Instantiate(GameManager.Instance.Keys[keyIndex]);
-        if(GameManager.Instance.Keys.Count > 1)
+        if(GameManager.Instance.Keys.Count > 0)
         {
+            keyIndex = Random.Range(0, GameManager.Instance.Keys.Count);
+            GameObject key = Instantiate(GameManager.Instance.Keys[keyIndex]);
             GameManager.Instance.Keys.RemoveAt(keyIndex);
+            key.transform.position = transform.position;
         }
-        key.transform.position = transform.position;
-
+        
         foreach(SpriteRenderer renderer in transform.GetComponentsInChildren<SpriteRenderer>())
         {
             Color color = renderer.color;
