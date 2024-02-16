@@ -14,19 +14,21 @@ public class ItemsPickUp : MonoBehaviour
             playerHealth = collision.GetComponent<HealthSystem>();
             if(gameObject.name == "ItemsPowerSpeedUp(Clone)")
             {
-                playerStat.CurrentStates.attackSO.delay -= 0.05f;
+                playerStat.CurrentStates.attackSO.delay -= 0.2f;
+                if (playerStat.CurrentStates.attackSO.delay < 0.1f)
+                    playerStat.CurrentStates.attackSO.delay = 0.1f;
             }
             if(gameObject.name == "ItemsPowerUp(Clone)")
             {
-                playerStat.CurrentStates.attackSO.power += 5f;
+                playerStat.CurrentStates.attackSO.power += 1f;
             }
             if(gameObject.name == "ItemsSpeedUp(Clone)")
             {
-                playerStat.CurrentStates.speed += 10f;
+                playerStat.CurrentStates.speed += 3f;
             }
             if(gameObject.name == "ItemsHPCure(Clone)")
             {
-                playerHealth.ChangeHealth(2);
+                playerHealth.ChangeHealth(10);
             }
             Destroy(gameObject);
         }

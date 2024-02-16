@@ -30,19 +30,21 @@ public class DoorActive : MonoBehaviour
         if (GameObject.FindGameObjectsWithTag("Monster").Length != 0 || GameObject.FindGameObjectsWithTag("Boss").Length != 0)
         {
             CloseDoor.SetActive(true);
-            if (templates.rooms.Count == 6)
+        }
+        else
+        {
+            CloseDoor.SetActive(false);
+            if (templates.rooms.Count == 8)
             {
                 if (!GameManager.Instance.bossRoomOpen)
                 {
                     BossDoor.SetActive(true);
-                } else
+                }
+                else
                 {
                     BossDoor.SetActive(false);
                 }
             }
-        } else {
-            CloseDoor.SetActive(false);
         }
-
     }
 }

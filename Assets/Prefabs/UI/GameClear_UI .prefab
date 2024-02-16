@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 8861447351045622629}
   - component: {fileID: 2445580064175682919}
   - component: {fileID: 1250259120217632574}
+  - component: {fileID: 8483572275650814856}
   m_Layer: 5
   m_Name: 'GameClear_UI '
   m_TagString: Untagged
@@ -239,6 +240,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8483572275650814856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2962992070846291172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3661536a0f6bf8842896361f8b89705a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4148881903364075755
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,4 +587,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8412869338781075126}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8483572275650814856}
+        m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
+        m_MethodName: LoadMainScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

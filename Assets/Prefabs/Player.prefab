@@ -423,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     Type: 2
-    maxHealth: 10
+    maxHealth: 30
     speed: 5
     attackSO: {fileID: 11400000, guid: ac95a2391d0041547882f4bf661199fc, type: 2}
   statsModifiers: []
@@ -514,3 +514,4 @@ MonoBehaviour:
     type: 3}
   speedUp: {fileID: 5940408790466896061, guid: 99cad78de9468c04a9fa34947a8537e4, type: 3}
   hpCure: {fileID: 5940408790466896061, guid: 765d5216ad96f0149a13c1ee4afc7e1a, type: 3}
+  openReady: 1

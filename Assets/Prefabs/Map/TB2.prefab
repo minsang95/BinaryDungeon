@@ -4588,4 +4588,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OpenDoor: {fileID: 2749513132763846637}
   CloseDoor: {fileID: 1859523225204337522}
-  BossDoor: {fileID: 0}
+  BossDoor: {fileID: 5003872275861346630}
