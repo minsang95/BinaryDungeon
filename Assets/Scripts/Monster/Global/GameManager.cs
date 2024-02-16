@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int keyOneCount = 0;
     [HideInInspector] public int keyPlusCount = 0;
     [HideInInspector] public int keyEqualCount = 0;
-    private bool bossRoomOpen = false;
+    public bool bossRoomOpen = false;
 
     private void Awake()
     {
