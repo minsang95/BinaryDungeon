@@ -20,7 +20,7 @@ public class RoomSpawner : MonoBehaviour {
 		if(spawned == false){
             rand = Random.Range(1, templates.TopBottomRooms.Length);
             //방 갯수 재한
-            if (templates.rooms.Count == 3)
+            if (templates.rooms.Count == 7)
 			{
                 Instantiate(templates.TopBottomRooms[0], transform.position, templates.TopBottomRooms[0].transform.rotation);
                 Destroy(gameObject, waitTime);
