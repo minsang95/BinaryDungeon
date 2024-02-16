@@ -59,7 +59,7 @@ public class BossHead : BossBase
         changeTime += Time.fixedDeltaTime;
         if (changePattern)
         {
-            switch (Random.Range(3, 4))
+            switch (Random.Range(0, 4))
             {
                 case 1: pattern = Pattern.P1; break;
                 case 2: pattern = Pattern.P2; break;
